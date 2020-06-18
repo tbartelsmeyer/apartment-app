@@ -1,0 +1,23 @@
+<h4> New Tenant Form: </h4>
+
+<form action="/tenants" method="post">
+
+<label>Name:</label>
+<input type="text" name="tenant[name]" placeholder="Write Tenant's Name"/>
+
+<select name="tenant[apartment_id]">
+    <option disabled selected> -- Select An Apartment -- </option>
+    <% @apartments.each do |apartment| %>
+        <option value=<%= apartment.id %> > 
+            <%= apartment.address %> 
+        </option>
+    <% end %>
+
+</select>
+
+<label>Create An Apartment:</label>
+<input type="text" name="apartment[address]" />
+
+<input type="submit" value="Create A New Tenant!">
+
+</form>

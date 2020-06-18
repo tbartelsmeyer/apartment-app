@@ -1,0 +1,9 @@
+<form action="/apartments/<%=@apartment.id%>" method="post">
+<input type="hidden" name="_method" value="patch"/>
+
+<label>Name:</label>
+<input type="text" name="address" value="<%= @apartment.address%>"/>
+
+<input type="submit"/>
+
+</form>

@@ -1,0 +1,18 @@
+<ul> Tenants: 
+<% @tenants.each do |tenant| %>
+    <a href="/tenants/<%= tenant.id%>">
+        <li> <%= tenant.name %> </li>
+    </a>
+<% end %>
+</ul>
+
+<form method="get" action="/tenants/new">
+    <button type="submit">Create A Tenant</button>
+</form>
+
+
+<form method="get" action="/apartments">
+    <button type="submit">All Apartments</button>
+</form>
+
+
